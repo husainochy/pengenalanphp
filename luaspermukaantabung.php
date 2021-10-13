@@ -1,53 +1,44 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
- <meta charset="utf-8">
-        <title>Tabung</title>
-          
-<style type="text/css">
-body {
- background-color:#fff;
- font-family: Lucida Grande, Verdana, Sans-serif;
- margin:40px;
- font-size:14px;
-  color: #4f55155;
-}
-  
-a {
- color: #003399;
- background-color: transparent;
- font-weight: normal;
-}
-  
-h1 {
- color: #444;
- background-color: transparent;
- border-bottom: 1px solid #d0d0d0;
- font-size: 16px;
- font-weight: bold;
- margin: 24px 0 2px;
- padding: 5px 0 6px 0;
-}
-</style>
-    </head>
-  
+<html>
+<head>
+    <title>Menghitung Luas PermukaanTabung</title>
+</head>
 <body>
-<h1>Volume & Luas Permukaan Tabung </h1>
-<p>Volume Tabung : 3.14 * r * r * t <br>
-Luas Permukaan Tabung : 2 * 3.14 * r * t</p>
-<p>Silahkan masukan data berikut :</p>
-<ul>
-    <?php echo form_open('volume/tabung'); ?>
-Jari - jari : <br> <?php echo form_input('r',$r); ?> <br>
-Tinggi : <br> <?php echo form_input('t',$t); ?> <br>
-    <p><?php echo validation_errors();?></p>
-      
-    <?php echo form_submit('submit','Hitung'); ?>
-    <?php echo form_close(); ?> <br>
-<strong>Volume Tabung = </strong><?php echo $vol; ?> <br>
-<strong>Luas Permukaan Tabung = </strong><?php echo $luas; ?>
-</ul>
-  
-<p><?php echo anchor('volume','Home'); ?></p>
+    <h1>Form Hitung Luas Permukaan Tabung</h1>
+    <h2>Isi Data:</h2>
+    <form action="#" method="POST" enctype="multipart/form-data">
+        <table>
+            <tr>
+                <td>Luas Alas^2</td>
+                <td>:</td>
+                <td><input type="text" name="alas" required></td>
+            </tr>
+            <tr>
+                <td>Luas Selimut Tabung</td>
+                <td>:</td>
+                <td><input type="text" name="tinggi" required ></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td><input type="submit" name="submit" value="Hitung"></td>
+            </tr>
+        </table>
+    </form>
+    <?php
+        if(isset($_POST['submit'])){
+            $alas    =$_POST['alas'];
+            $tinggi    =$_POST['tinggi'];
+            
+            // menghitung luas segitiga
+            $luas_segitiga = (2 * $alas) + $tinggi;
+            
+            echo "Hasil hitung luas segitiga adalah sebagai berikut:<br />";
+            echo "Diketahui;<br />";
+            echo "Luas Alas = $alas<br />";
+            echo "Luas Selimut Tabung = $tinggi<br />";
+            echo "Maka luas segitiga sama dengan  ((2*$alas) + $tinggi) = $luas_segitiga";
+        }
+    ?>
 </body>
+<body><a class="nav-link" href="index.php"><h3>Kembali Ke Halaman Awal</h3></a></body>
 </html>

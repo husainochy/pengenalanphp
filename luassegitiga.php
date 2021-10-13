@@ -5,7 +5,7 @@
 <body>
     <h1>Form Hitung Luas Segitiga Dengan PHP</h1>
     <h2>Isi Data:</h2>
-    <form action="./" method="POST" enctype="multipart/form-data">
+    <form action="#" method="POST" enctype="multipart/form-data">
         <table>
             <tr>
                 <td>Alas Segitiga</td>

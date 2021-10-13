@@ -5,7 +5,7 @@
 <body>
     <h1>Form Hitung Luas Lingkaran Dengan PHP</h1>
     <h2>Isi Data:</h2>
-    <form action="./" method="POST" enctype="multipart/form-data">
+    <form action="#" method="POST" enctype="multipart/form-data">
         <table>
             <tr>
                 <td>Jari-jari Lingkaran</td>
@@ -35,4 +35,5 @@
         }
     ?>
 </body>
+<body><a class="nav-link" href="index.php"><h3>Kembali Ke Halaman Awal</h3></a></body>
 </html>

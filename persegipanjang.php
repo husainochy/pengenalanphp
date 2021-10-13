@@ -5,7 +5,7 @@
 <body>
     <h2>Form Hitung Luas Persegi Panjang Dengan PHP</h2>
     <h3>Isi Data:</h3>
-    <form action="./" method="POST" enctype="multipart/form-data">
+    <form action="#" method="POST" enctype="multipart/form-data">
         <table>
             <tr>
                 <td>Panjang</td>
@@ -43,4 +43,5 @@
     }
 	?>
 </body>
+<body><a class="nav-link" href="index.php"><h3>Kembali Ke Halaman Awal</h3></a></body>
 </html>
